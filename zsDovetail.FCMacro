@@ -119,11 +119,7 @@ __version__ = "0.2024.01.31"
 #
 #        if fp.Type == "Pins":
 #            # create the cutout section
-#            if fp.ShowTool:
-#                box = Part.makeBox(fp.Width, fp.PinHeight, 3*fp.Depth)
-#                box.Placement.move(FreeCAD.Vector(0, 0, -fp.Depth))
-#            else:
-#                box = Part.makeBox(fp.Width, fp.PinHeight, fp.Depth)
+#            box = Part.makeBox(fp.Width, fp.PinHeight, fp.Depth)
 #
 #            shape = box.cut(shape)
 #
@@ -156,10 +152,7 @@ __version__ = "0.2024.01.31"
 #        # We create a face:
 #        f = Part.Face(wire)
 #
-#        if fp.ShowTool:
-#            shape = f.extrude(FreeCAD.Vector(0,0,-fp.Depth)).fuse(f.extrude(FreeCAD.Vector(0,0,2*fp.Depth)))
-#        else:
-#            shape = f.extrude(FreeCAD.Vector(0,0,fp.Depth))
+#        shape = f.extrude(FreeCAD.Vector(0,0,fp.Depth))
 #
 #        return shape
 #
